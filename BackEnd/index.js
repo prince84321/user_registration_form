@@ -22,6 +22,8 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+// Route to create a new user //
+
 server.post("/user", async (req, res) => {
   try {
     const user = new User(req.body);
@@ -33,6 +35,8 @@ server.post("/user", async (req, res) => {
     res.status(500).send("Error saving user");
   }
 });
+
+// Route to get all users from the database //
 
 server.get("/users", async (req, res) => {
   try {
