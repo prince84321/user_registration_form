@@ -8,8 +8,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import ValidationSchema from "../../components/validation/ValidationSchema";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -27,6 +29,7 @@ const Registration = () => {
       const response = await axios.post("http://localhost:8080/user", data);
       console.log(response);
       reset();
+      navigate("/data_table"); // navigate to data_table page on successful submission
     } catch (error) {
       console.log(error);
     }
@@ -48,6 +51,7 @@ const Registration = () => {
           <Button className="btn-1" variant="contained" onClick={onCancel}>
             CANCEL
           </Button>
+
           <Button type="submit" className="btn-2" variant="contained">
             SUBMIT
           </Button>

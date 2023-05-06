@@ -21,3 +21,17 @@
     gap: 15px;
     align-items: center;
 }
+.dt-buttons{
+    margin-left: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;   
+}
+.dt-button{
+   padding: 0 !important;
+   height: 30px;
+    width: 60px;
+
+}
