@@ -1,0 +1,32 @@
+
+
+.address__detail{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+.address__detail-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem ;
+}
+
+.input__field{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem; 
+}
+
+#demo-simple-select-label{
+   position: absolute;
+   left: 2px;
+   top: -7px;
+}
+.MuiAutocomplete-input{
+  position: relative;
+  top: -8px;
+  left: auto;
+}
+  

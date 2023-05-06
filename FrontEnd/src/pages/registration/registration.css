@@ -1,0 +1,44 @@
+.user__registration{
+    padding: 1rem;
+    background-color: aqua;
+    height: 100vh;
+
+}
+
+.user__registration h2{
+     text-align: center;
+     color: grey;
+     font-size: 1.5rem;
+}
+
+.form__container{
+    background-color: rgb(237, 237, 245);
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    padding-bottom: 2rem;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(120,119,120,1);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(120,119,120,1);
+    box-shadow: 1px 1px 4px 1px rgba(120,119,120,1);
+    position: relative;
+    
+}
+.btn-1{
+    position: absolute;
+    left: 72rem;
+    top: 0.7rem;
+    height: 50px;
+    background-color: transparent !important;
+    color: rgb(216, 94, 94) !important;
+    border: 1px solid rgb(216, 94, 94) !important;
+}
+.btn-2{
+    position: absolute;
+    left: 75rem;
+    top: 0.7rem;
+    height: 50px;
+    background-color: green !important;
+    
+}
+.btn-2:hover{
+    opacity: 0.6;
+}
