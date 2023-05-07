@@ -64,9 +64,7 @@ const Other = ({ register, control }) => {
         <div className="input__field">
           <label htmlFor="name">Marial Status</label>
           <FormControl style={{ width: "150px" }}>
-            <InputLabel id="demo-simple-select-label">
-              Enter Marial Status
-            </InputLabel>
+            <InputLabel id="demo-simple-select-label">Marial Status</InputLabel>
 
             <Controller
               render={({ field }) => (

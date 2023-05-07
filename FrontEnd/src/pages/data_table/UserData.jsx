@@ -5,6 +5,7 @@ import "datatables.net-buttons-dt";
 import "datatables.net-buttons/js/buttons.colVis.mjs";
 import "datatables.net-buttons/js/buttons.html5.mjs";
 import "datatables.net-buttons/js/buttons.print.mjs";
+import "datatables.net-scroller-dt";
 
 const UserData = () => {
   const tableRef = useRef(null);
@@ -41,16 +42,21 @@ const UserData = () => {
           $(tableRef.current).DataTable({
             data: formattedData,
             columns: [
-              { title: "Name", data: "name", width: "80px" },
-              { title: "Age/Sex", data: "ageSex", width: "30px" },
-              { title: "Mobile", data: "mobile", width: "50px" },
-              { title: "Address", data: "address", width: "200px" },
-              { title: "Govt ID", data: "govt_id", width: "100px" },
-              { title: "Guardian Details", data: "guardian", width: "90px" },
-              { title: "Nationality", data: "nationality", width: "40px" },
+              { title: "Name", data: "name" },
+              { title: "Age/Sex", data: "ageSex" },
+              { title: "Mobile", data: "mobile" },
+              { title: "Address", data: "address" },
+              { title: "Govt ID", data: "govt_id" },
+              { title: "Guardian Details", data: "guardian" },
+              { title: "Nationality", data: "nationality" },
             ],
             dom: "lBfrtip",
             buttons: ["excel", "print", "pdf"],
+            scrollY: 450,
+            deferRender: true,
+            scroller: true,
+            order: [],
+            autoWidth: true,
           });
         }
       });
@@ -58,16 +64,16 @@ const UserData = () => {
 
   return (
     <div className="user__data">
-      <table id="example" ref={tableRef} class="display">
+      <table id="example" ref={tableRef} className="display">
         <thead className="table__head">
           <tr>
-            <th style={{ width: "80px" }}>Name</th>
-            <th style={{ width: "30px" }}>Age/Sex</th>
-            <th style={{ width: "50px" }}>Mobile</th>
-            <th style={{ width: "200px" }}>Address</th>
-            <th style={{ width: "100px" }}>Govt ID</th>
-            <th style={{ width: "90px" }}>Guardian Details</th>
-            <th style={{ width: "40px" }}>Nationality</th>
+            <th>Name</th>
+            <th>Age/Sex</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Govt ID</th>
+            <th>Guardian Details</th>
+            <th>Nationality</th>
           </tr>
         </thead>
         <tbody></tbody>
